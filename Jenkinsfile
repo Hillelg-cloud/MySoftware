@@ -1,4 +1,4 @@
-properties([pipelineTriggers([pollSCM('* * * * *')])])
+properties([pipelineTriggers([pollSCM('*/5 * * * *')])])
 node{
     stage("1"){
         git branch:"main", url: "https://github.com/Hillelg-cloud/MySoftware.git"
